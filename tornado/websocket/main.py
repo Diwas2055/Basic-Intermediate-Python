@@ -1,4 +1,4 @@
-import tornado.escape  #for escaping/unescaping methods for HTML, JSON, URLs, etc
+import tornado.escape  #for escaping/un-escaping methods for HTML, JSON, URLs, etc
 import tornado.ioloop  #event loop for non-blocking sockets
 import tornado.options  #command line parsing module to define options
 import tornado.web  #provides a simple web framework with asynchronous featuresfrom tornado.options import define, options
@@ -8,6 +8,8 @@ import os.path
 import uuid
 
 from tornado.options import define, options
+
+# A command line parsing module that lets modules define their own options.
 
 define("port", default=8080, type=int)  #setting the port to 8000 which can easily be changed
 
