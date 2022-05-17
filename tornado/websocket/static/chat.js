@@ -1,12 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
     if (!window.console) window.console = {};
-    if (!window.console.log) window.console.log = function() {};
+    if (!window.console.log) window.console.log = function () {
+    };
 
-    $("#messageform").on("submit", function() {
+    $("#messageform").on("submit", function () {
         newMessage($(this));
         return false;
     });
-    $("#messageform").on("keypress", function(e) {
+    $("#messageform").on("keypress", function (e) {
         if (e.keyCode == 13) {
             newMessage($(this));
             return false;
@@ -22,7 +23,7 @@ function newMessage(form) {
     form.find("input[type=text]").val("").select();
 }
 
-jQuery.fn.formToDict = function() {
+jQuery.fn.formToDict = function () {
     var fields = this.serializeArray();
     var json = {}
     for (var i = 0; i < fields.length; i++) {
@@ -35,15 +36,15 @@ jQuery.fn.formToDict = function() {
 var updater = {
     socket: null,
 
-    start: function() {
+    start: function () {
         var url = "ws://" + location.host + "/chatsocket";
         updater.socket = new WebSocket(url);
-        updater.socket.onmessage = function(event) {
+        updater.socket.onmessage = function (event) {
             updater.showMessage(JSON.parse(event.data));
         }
     },
 
-    showMessage: function(message) {
+    showMessage: function (message) {
         var existing = $("#m" + message.id);
         if (existing.length > 0) return;
         var node = $(message.html);

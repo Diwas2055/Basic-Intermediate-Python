@@ -11,5 +11,6 @@ def print_msg(msg):
 
     return printer  # returns the nested function
 
+
 another = print_msg("Hello")
 another()

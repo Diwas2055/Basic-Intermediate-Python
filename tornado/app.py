@@ -4,24 +4,29 @@ import tornado.ioloop
 # for HTTP requesthandlers ( to map the requests to request handlers)
 import tornado.web
 
+
 class HelloHandler(tornado.web.RequestHandler):
     def get(self):
         self.write('Hello, Tornado 🌪️!')
 
-class PostHandler (tornado.web.RequestHandler):
+
+class PostHandler(tornado.web.RequestHandler):
     def get(self):
         self.write("<h1>This is Post 1 ✍️</h1>")
 
-class HomeHandler (tornado.web.RequestHandler):
+
+class HomeHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("home.html")
+
 
 class WeatherHandler(tornado.web.RequestHandler):
     def get(self):
         degree = int(self.get_argument("degree"))
         output = "Hot ☀️!" if degree > 20 else "cold 🌦️"
         drink = "Have some Beer 🍺!" if degree > 20 else "you need hot beverage ☕"
-        self.render("weather.html", output = output, drink = drink)
+        self.render("weather.html", output=output, drink=drink)
+
 
 def make_app():
     return tornado.web.Application([
@@ -29,10 +34,9 @@ def make_app():
         (r"/post", PostHandler),
         (r"/home", HomeHandler),
         (r"/weather", WeatherHandler),
-    ], 
-    debug = True,
-    autoreload = True)
-
+    ],
+        debug=True,
+        autoreload=True)
 
 
 if __name__ == "__main__":
