@@ -294,7 +294,6 @@ celerybeat.pid
 # Environments
 .env
 .venv
-orm_peewee/venv/
 env/
 venv/
 ENV/
