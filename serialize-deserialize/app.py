@@ -45,6 +45,7 @@ print(json_string)
 friend1 = {"Dan": [20, "London", 3234], "Maria": [22, "Paris", 7876]}
 friend2 = {"Joey": [23, "New-york", 32394], "Ross": [25, "Washington", 786776]}
 friends = (friend1, friend2)
+    #wb:- write in binary mode
 with open('friends.txt', 'wb') as f:
     # pickle.dump(data,file)
     pickle.dump(friends, f)
@@ -52,7 +53,7 @@ with open('friends.txt', 'wb') as f:
 
 """ Deserialize """
 # loads() – This function is called to de-serialize a data stream.
-
+    #rb:- read in binary mode
 with open('friends.txt', 'rb') as f:
     obj = pickle.load(f)
     print(type(obj))
