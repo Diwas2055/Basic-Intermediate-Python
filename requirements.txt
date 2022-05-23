@@ -1,3 +1,9 @@
-python-dotenv==0.20.0
 beautifulsoup4==4.11.1
+Js2Py==0.71
+pyjsparser==2.7.1
+python-dotenv==0.20.0
+pytz-deprecation-shim==0.1.0.post0
+six==1.16.0
 soupsieve==2.3.2.post1
+tzdata==2022.1
+tzlocal==4.2
