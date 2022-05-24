@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/orm_peewee/venv/include" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (python_demo-fAQ_ioTo)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (python_demo)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
