@@ -10,7 +10,7 @@ def greeting(name):
 if __name__=="__main__":
     greeting()
     
-# Command :- python greet.py Server   
+# Command :- python index.py Server   
 
 # ! Optional arguments: Click gives the option to include optional parameters in the form of flags.
 
@@ -22,3 +22,19 @@ def hello(string):
   
 if __name__=="__main__":
     hello()    
+
+# Command :- python index.py --string Dinesh    
+
+# ! Optional arguments: Click gives the option to include optional parameters in the form of flags.
+# A decorator that is used to validate the input.
+
+@click.command()
+@click.option('--string', type=click.Choice(['Dinesh', 'Suresh', 'Ramesh']),
+        help ='This is a choice Type')
+def hello(string):
+    click.echo("Hello, {}".format(string))
+  
+if __name__=="__main__":
+    hello() 
+
+# Command :- python index.py --string Dinesh    
