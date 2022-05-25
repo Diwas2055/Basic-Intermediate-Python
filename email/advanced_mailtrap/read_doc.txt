@@ -1,0 +1,4 @@
+For More About Mailtrap :- 
+
+Click Here:- 
+    https://mailtrap.io/blog/sending-emails-in-python-tutorial-with-code-examples/#How-to-send-multiple-emails-in-Python
