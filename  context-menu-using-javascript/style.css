@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+    margin: 0;
+    background: url(bg.jfif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+#context-menu{
+    position: fixed;
+    z-index: 999999;
+    width: 200px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: top left;
+    box-shadow: 0px 5px 15px 0px rgb(0, 0, 0, .24);
+}
+
+#context-menu.active{
+    transform: scale(1);
+    animation:pop .3s cubic-bezier(0,1,.5,1.08);
+}
+
+@keyframes pop{
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+#context-menu .item{
+    padding: 10px 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+#context-menu .item::selection{
+    background: none;
+}
+
+#context-menu .item:hover{
+    background: #f2f2f2;
+}
+
+#context-menu .item:nth-child(1){
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#context-menu .item:nth-last-child(1){
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#context-menu .item:active{
+    background: #dddddd;
+}
+
+#context-menu .item i{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.arrow-right .uil-angle-right{
+    float: right;
+}
+
+.divider{
+    margin: 2px 0px;
+    border-bottom: 1px solid #ccc;
+}
