@@ -1,8 +1,7 @@
 import tornado.escape  # for escaping/un-escaping methods for HTML, JSON, URLs, etc
 import tornado.ioloop  # event loop for non-blocking sockets
 import tornado.options  # command line parsing module to define options
-import \
-    tornado.web  # provides a simple web framework with asynchronous featuresfrom tornado.options import define, options
+import tornado.web  # provides a simple web framework with asynchronous featuresfrom tornado.options import define, options
 import tornado.websocket  # implementation of the WebSocket protocol and bidirectional communication
 import logging
 import os.path
