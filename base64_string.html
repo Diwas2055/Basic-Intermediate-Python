@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Convert image into base64 string using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <form>
+
+        <input type="file" name="file" id="file" onchange="encodeImgtoBase64(this)">
+
+        <button type="submit">Submit</button>
+
+        <a id="convertImg" href=""></a>
+
+        <br>
+
+        <img src="" alt="" id="base64Img" width="500">
+
+    </form>
+</body>
+<script type="text/javascript">
+    function encodeImgtoBase64(element) {
+
+        var file = element.files[0];
+
+        var reader = new FileReader();
+
+        reader.onloadend = function() {
+
+            $("#convertImg").attr("href", reader.result);
+
+            $("#convertImg").text(reader.result);
+
+            $("#base64Img").attr("src", reader.result);
+        }
+
+        reader.readAsDataURL(file);
+
+    }
+</script>
+
+</html>
