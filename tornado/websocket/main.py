@@ -18,6 +18,7 @@ class Application(tornado.web.Application):  # setting a tornado class as a web 
     def __init__(self):
         handlers = [(r"/", MainHandler), (r"/chatsocket", ChatSocketHandler)]  # setting the nesassary urls
         settings = dict(
+            autoreload=True,  # reloading the server when a file is changed
             cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
             template_path=os.path.join(os.path.dirname(__file__), "templates"),  # providing the templates path
             static_path=os.path.join(os.path.dirname(__file__), "static"),  # providing the static folder's path

@@ -1,0 +1,8 @@
+# WebSocket
+    ->  A WebSocket is a standard protocol for two-way data transfer between a client and server. 
+        The WebSockets protocol does not run over HTTP, instead it is a separate implementation on top of TCP.
+
+    ->  A WebSocket connection allows full-duplex communication between a client and server so that either side can push data to
+        the other through an established connection. 
+
+    
