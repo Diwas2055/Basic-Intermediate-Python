@@ -1,5 +1,7 @@
 {
   "cSpell.words": [
+    "asizeof",
+    "dataclass",
     "Dinesh",
     "dotenv",
     "Mailtrap",
@@ -7,6 +9,7 @@
     "mimefile",
     "mimemsg",
     "psycopg",
+    "pympler",
     "Ramesh",
     "Suresh"
   ]
