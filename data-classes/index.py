@@ -2,6 +2,21 @@
 # It was introduced in python 3.7. 
 # A dataclass decorator can be used to implement classes that define objects with only data and very minimal functionalities. 
 
+# The syntax of the dataclass is:
+
+# Syntax: @dataclasses.dataclass(*, init=True, repr=True, 
+#                                    eq=True, order=False, unsafe_hash=False, 
+#                                    frozen=False)
+
+# Parameters:-
+
+#     init: If true  __init__() method will be generated
+#     repr: If true  __repr__() method will be generated
+#     eq: If true  __eq__() method will be generated
+#     order: If true  __lt__(), __le__(), __gt__(), and __ge__() methods will be generated.
+#     unsafe_hash: If False __hash__() method is generated according to how eq and frozen are set
+#     frozen: If true assigning to fields will generate an exception.
+
 
 #! Without dataclasses we should write the following code: Using repr() Method
 class Person:
@@ -71,3 +86,34 @@ print("Simple Position:",simple)
 print("Slot Position:",slot)
 print("Size of Simple Position:",asizeof.asizeof(simple))
 print("Size of Slot Position:",asizeof.asizeof(slot))
+
+
+# dataclasses.Field()
+
+# The field() objects describe each defined field.  
+
+# -> Syntax: dataclasses.field(*, default=MISSING, default_factory=MISSING, repr=True, 
+#                               hash=None, init=True, compare=True, metadata=None)
+
+# Parameters:
+#   ->  default : This field is used to specify default values for this field.
+#   ->  default_factory : This field accepts a function and returns the initial value of the field, it must be a zero-argument.
+#   ->  init : If true this field is included as a parameter to the generated __init__() method.
+#   ->  repr : If true (the default), this field is included in the string returned by the generated __repr__() method.
+#   ->  hash : If true, this field is included in the generated __hash__() method.
+#   ->  compare : If true (the default), this field is included in the generated equality and comparison methods (__eq__(), __gt__().
+#   ->  metadata : This can be a mapping or None. None is treated as an empty dict.
+
+# Importing the dataclass and field from the dataclasses module.
+from dataclasses import dataclass, field
+@dataclass()
+class Student():
+    name: str
+    stu_id: int
+    # Defining a class attribute with a default value.
+    clss: int = field(default=10)
+
+
+student = Student('HTD', 17)
+print(student)
+
