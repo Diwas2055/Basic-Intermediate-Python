@@ -1,13 +1,18 @@
 {
   "cSpell.words": [
+    "arange",
     "asizeof",
     "dataclass",
+    "Dataframe",
     "Dinesh",
     "dotenv",
+    "dtype",
     "Mailtrap",
     "mayank",
     "mimefile",
     "mimemsg",
+    "ndarray",
+    "ndarrays",
     "psycopg",
     "pympler",
     "Ramesh",
