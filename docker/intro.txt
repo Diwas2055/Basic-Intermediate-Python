@@ -1,0 +1,63 @@
+DockerFile Link :- https://docs.docker.com/engine/reference/builder/
+Docker Compose Link :- https://docs.docker.com/compose/compose-file/compose-file-v3/
+
+
+Some of the commands used in Docker Compose are:
+
+i. depends_on 🔗
+    - Express dependency between services. Service dependencies cause the following behaviors:
+
+Example:- 
+
+    version: "3.9"
+    services:
+    web:
+        build: .
+        depends_on:
+        - db
+        - redis
+    redis:
+        image: redis
+    db:
+        image: postgres
+
+-> `docker-compose up` starts services in dependency order. 
+-> In the following example, db and redis are started before web.
+
+ii. links 🔗
+    -   Links allow you to define extra aliases by which a service is reachable from another service. 
+        They are not required to enable services to communicate - by default, any service can reach 
+        any other service at that service’s name.
+Example:-
+
+version: "3.9"
+services:
+
+  web:
+    build: .
+    links:
+      - "db:database"
+  db:
+    image: postgres
+
+-> In the following example, db is reachable from web at the hostname db and database:
+
+iii. env_file 🔗
+        - Add environment variables from a file. Can be a single value or a list.
+Example:-
+
+Single env_file:-
+
+    env_file: .env
+
+Or multiple env_file:- 
+
+    env_file:
+        - ./common.env
+        - ./apps/web.env
+        - /opt/runtime_opts.env
+
+iv. tty 🔗
+        -  If set to true, the container will allocate a pseudo-TTY.
+        -  If you write “tty: true” in the docker-compose.yml, you will be able to “keep the container running”.
+        -  This is the same as writing -t in the docker

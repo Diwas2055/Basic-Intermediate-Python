@@ -1,5 +1,30 @@
-version: '3'
+version: '3.8'
 services:
+
+  network:
+    # hostname of the network
+    dealvault-vpc:
+      # Specify which driver should be used for this network. 
+      driver: bridge
+
+  api:
+    # Path to dockerfile.
+    # '.' represents the current directory in which
+    # docker-compose.yml is present.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Container name.
+    container_name: testing_container_api
+    # Mapping of container port to host port.
+    ports:
+      - "4000:4000"
+    # Mount volume
+    volumes:
+      - ./api:/app
+      - ./app/node_modules
+    stdin_open: true # docker run -i (interactive)
+    tty: true # docker run -t (forground , run in background)
   web:
     # Path to dockerfile.
     # '.' represents the current directory in which
@@ -7,9 +32,9 @@ services:
     build: .
 
     # Mapping of container port to host
-    
     ports:
-      - "5000:5000"
+      - "4000:4000"
+
     # Mount volume 
     volumes:
       - "/usercode/:/code"
@@ -18,7 +43,7 @@ services:
     # for reachability.
     links:
       - "database:backenddb"
-    
+
   database:
 
     # image to fetch from docker hub
@@ -38,4 +63,3 @@ services:
     # is executed as soon as container is up nd running.
     volumes:
       - "/usercode/db/init.sql:/docker-entrypoint-initdb.d/init.sql"
-    
