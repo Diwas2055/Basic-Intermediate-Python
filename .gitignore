@@ -335,3 +335,6 @@ cython_debug/
 
 .vscode/*
 **/node_modules/*
+**/vscode/*
+**/.vscode/*
+**/.idea/*
