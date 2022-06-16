@@ -333,6 +333,7 @@ cython_debug/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm+all,pycharm
 
+.vscode/
 .vscode/*
 **/node_modules/*
 **/vscode/*
