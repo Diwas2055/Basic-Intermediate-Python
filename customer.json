@@ -1,0 +1,52 @@
+[
+    {
+        "password": "password@123",
+        "email": "jshaw@example.com",
+        "username": "Derek",
+        "first_name": "Derek",
+        "last_name": "Martin",
+        "phone": 9548606708,
+        "city": "East Kathrynmouth",
+        "about": "This is a sample text : about"
+    },
+    {
+        "password": "password@123",
+        "email": "dvargas@example.net",
+        "username": "Justin",
+        "first_name": "Justin",
+        "last_name": "Ochoa",
+        "phone": 9810822393,
+        "city": "Paynemouth",
+        "about": "This is a sample text : about"
+    },
+    {
+        "password": "password@123",
+        "email": "kfarrell@example.com",
+        "username": "Philip",
+        "first_name": "Philip",
+        "last_name": "Watkins",
+        "phone": 9291864550,
+        "city": "Cookbury",
+        "about": "This is a sample text : about"
+    },
+    {
+        "password": "password@123",
+        "email": "xlopez@example.com",
+        "username": "Victoria",
+        "first_name": "Victoria",
+        "last_name": "Larson",
+        "phone": 9580997143,
+        "city": "West Alexandra",
+        "about": "This is a sample text : about"
+    },
+    {
+        "password": "password@123",
+        "email": "uingram@example.org",
+        "username": "Joshua",
+        "first_name": "Joshua",
+        "last_name": "Cooper",
+        "phone": 9607000480,
+        "city": "South Justinstad",
+        "about": "This is a sample text : about"
+    }
+]
