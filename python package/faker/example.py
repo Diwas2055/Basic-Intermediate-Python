@@ -41,9 +41,9 @@ def input_data(x):
 
 
 def main():
-    no_of_input = 5
+    no_of_input = 1000
     data = input_data(no_of_input)
-    with open('customer.json', 'w', encoding='utf-8') as f:
+    with open('python package/faker/customer.json', 'w', encoding='utf-8') as f:
      json.dump(data, f, ensure_ascii=False, indent=4)
     print("File has been created.")
 

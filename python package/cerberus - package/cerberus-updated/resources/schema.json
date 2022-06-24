@@ -1,0 +1,40 @@
+{
+  "id": {
+    "type": "integer",
+    "min": 0,
+    "max": 100,
+    "required": true
+  },
+  "name": {
+    "type": "string",
+    "minlength": 2,
+    "maxlength": 255,
+    "required": true
+  },
+  "accounts": {
+    "type": "list",
+    "schema": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    }
+  },
+  "contact_details": {
+    "type": "dict",
+    "schema": {
+      "phone": {
+        "type": "string",
+        "minlength": 11,
+        "maxlength": 11,
+        "regex": "^0[0-9]{10}$"
+      },
+      "email": {
+        "type": "string",
+        "minlength": 2,
+        "maxlength": 255,
+        "required": true,
+        "regex": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+      }
+    }
+  }
+}
