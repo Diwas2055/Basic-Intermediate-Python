@@ -46,3 +46,12 @@ def convert_datetime_into_timestamp(get_datetime=None):
         return date_timestamp
     else:
         return None
+
+# Convert List into string
+
+def convert_list_to_string(field_name,list=None):
+    status=list
+    sts_query: list = []
+    for s in status:
+        sts_query.append(f'{field_name} = {s}')
+    return sts_query
