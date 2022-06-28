@@ -1,0 +1,64 @@
+
+#! In Python, A traceback is a report containing the function calls made in your code at a specific point i.e when you get an error it is recommended that you should trace it backward(traceback).
+Whenever the code gets an exception, the traceback will give the information about what went wrong in the code.
+
+-> Some of the common traceback errors are:-
+
+-> NameError
+-> IndexError
+-> KeyError
+-> TypeError
+-> valueError
+-> ImportError /ModuleNotFound
+
+1. NameError: NameError occurs when you try to reference some variable which hasn’t been defined in the code.
+Example:-
+    number = 1    
+    # since no numb variable is
+    # defined it will give NameError.
+    print(numb) 
+
+2. IndexError: An IndexError is raised when a sequence is referenced which is out of range.
+Example:
+    mylist = [1, 2, 3]
+    
+    # Accessing the index out
+    # of range will raise IndexError
+    print(mylist[10])
+
+3. KeyError: Similar to the IndexError, the KeyError is raised when you attempt to access a key that isn’t in the mapping, usually in the case of Python dict. Think of this as the IndexError but for dictionaries.
+Example:-
+    DICT ={ "a" :25, "b" :65 }
+    
+    # A is not mapped in dict
+    # will raise KeyError
+    print(DICT["A"])
+
+4.  TypeError: TypeError is raised when an operation or function is applied to an object of inappropriate type. This exception returns a string giving details about the type mismatch.
+Example:-
+    c = 'b'+3
+    print(c)
+
+5. ValueError: A ValueError is raised when a built-in operation or function receives an argument that has the right type but an invalid value.
+Example:-
+
+    print(int('xyz'))
+
+6. ImportError: The ImportError is raised when something goes wrong with an import statement. You’ll get this exception, or its subclass ModuleNotFoundError, if the module you are trying to import can’t be found or if you try to import something from a module that doesn’t exist in the module.
+Example:-
+
+    import module_does_not_exist
+
+
+Traceback in Python :- 
+
+General structure of a stack trace for an exception:-
+
+  ->  Traceback for most recent call
+  ->  Location of the program 
+  ->  Line in the program where error was encountered
+  ->  Name of the error: relevant information about the exception 
+
+Link :- 
+    a. https://www.javatpoint.com/traceback-in-python
+    b. https://realpython.com/python-traceback/  
