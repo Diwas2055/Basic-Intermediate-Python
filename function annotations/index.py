@@ -16,3 +16,5 @@ print(func2(10, 20))
 print(func2.__annotations__)
 # It's printing the docstring of the function.
 print(func2.__doc__)
+
+
