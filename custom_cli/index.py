@@ -10,7 +10,9 @@ def greeting(name):
 if __name__=="__main__":
     greeting()
     
-# Command :- python index.py Server   
+# Command :- python index.py Server  
+#!   OR  
+# Command :- python -m  index Server
 
 # ! Optional arguments: Click gives the option to include optional parameters in the form of flags.
 
