@@ -55,3 +55,16 @@ def convert_list_to_string(field_name,list=None):
     for s in status:
         sts_query.append(f'{field_name} = {s}')
     return sts_query
+
+
+def convert_dict_to_dot_notation(data):
+    """
+    It takes a dictionary and returns a namedtuple
+    
+    :param data: The data to be converted
+    :return: A namedtuple
+    """
+    from collections import defaultdict, namedtuple
+    if isinstance(data, dict):
+        data = namedtuple("MyClass", data.keys())(*data.values())
+    return data
