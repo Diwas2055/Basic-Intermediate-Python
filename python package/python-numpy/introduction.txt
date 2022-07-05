@@ -1,0 +1,107 @@
+->  NumPy is an open source library available in Python, which helps in mathematical, scientific, engineering, and data science programming. 
+    It is a very useful library to perform mathematical and statistical operations in Python. It works perfectly for multi-dimensional arrays and matrix multiplication.
+
+->  NumPy is a programming language that deals with multi-dimensional arrays and matrices. On top of the arrays and matrices, 
+    NumPy supports a large    number of mathematical operations.
+
+
+# Why use NumPy ?
+
+->  NumPy is memory efficiency, meaning it can handle the vast amount of data more accessible than any other library. 
+    Besides, NumPy is very convenient to work with, especially for matrix multiplication and reshaping. On top of that, NumPy is fast.
+
+
+# What is numpy.zeros() ?
+
+->  numpy.zeros() or np.zeros Python function is used to create a matrix full of zeroes. 
+    numpy.zeros() in Python can be used when you initialize the weights during the first iteration in TensorFlow and other statistic tasks.
+    
+->  numpy.zeros() function Syntax :- numpy.zeros(shape, dtype=float, order='C')
+
+->  Python numpy.zeros() Parameters :-
+     - Shape : is the shape of the numpy zero array
+     - Dtype : is the datatype in numpy zeros. It is optional. The default value is float64
+     - Order : Default is C which is an essential row style for numpy.zeros() in Python.
+
+
+# What is numpy.ones() ?
+
+->  np.ones() function is used to create a matrix full of ones. 
+    numpy.ones() in Python can be used when you initialize the weights during the first iteration in TensorFlow and other statistic tasks.
+
+->  numpy.ones() function Syntax :- numpy.ones(shape, dtype=float, order='C')
+
+->  numpy.ones() Parameters :- 
+     - Shape : is the shape of the np.ones Python Array
+     - Dtype : is the datatype in numpy ones. It is optional. The default value is float64
+     - Order : Default is C which is an essential row style.
+
+# What is numpy.reshape() ?
+
+->  numpy.reshape() function is used to shape an array without changing its data. 
+    In some occasions, you may need to reshape the data from wide to long. You can use the np.reshape function for this.
+
+->  np.reshape() function Syntax :- np.reshape(array, newShape, order='C')
+
+->  numpy.reshape() Parameters :- 
+     - a : Array that you want to reshape
+     - newShape : The new desires shape
+     - order : Default is C which is an essential row style.
+
+# What is numpy.flatten() ?
+
+->  numpy.flatten() function is used to return a copy of the array in one-dimension. 
+    When you deal with some neural network like convent, you need to flatten the array. You can use the numpy.flatten() functions for this.
+
+->  np.flatten() function Syntax :- np.flatten(array, order='C')
+
+-> numpy.flatten() Parameters :- 
+     - order : Default is C which is an essential row style.
+
+# What is numpy.hstack() ?
+
+->  numpy.hstack is a function in Python that is used to horizontally stack sequences of input arrays in order to make a single array. 
+    With hstack() function, you can append data horizontally. It is a very convenient function in NumPy.
+
+# What is numpy.vstack() ?
+
+->  numpy.vstack is a function in Python which is used to vertically stack sequences of input arrays in order to make a single array. 
+    With vstack() function, you can append data vertically.
+
+# What is numpy.asarray() ?
+->  numpy.asarray() function is used when you want to convert an input to an array.
+    The input could be a lists, tuple, ndarray, etc.
+
+->  numpy.asarray() function Syntax: - numpy.asarray(data, dtype=None, order=None)[source]
+
+->  numpy.asarray() Params :- 
+     - data : Data that you want to convert to an array
+     - dtype : This is an optional argument. If not specified, the data type is inferred from the input data
+     - order : Default is C which is an essential row style. Other option is F (Fortan-style)
+    
+
+
+# What is numpy.arange()?
+
+->  numpy.arange() is an inbuilt numpy function that returns an ndarray object containing evenly spaced values within a defined interval. 
+    For instance, you want to create values from 1 to 10; you can use np.arange() in Python function.
+
+->  numpy.arange() function Syntax :- numpy.arange(start, stop, step, dtype)
+
+->  numpy.arange() Parameters :- 
+     - start: Start of interval for np.arange in Python function.
+     - stop: End of interval.
+     - step: Spacing between values. Default step is 1.
+     - dtype: Is a type of array output for NumPy arange in Python.
+
+# What is numpy.linspace()?
+
+->  numpy.linspace() function gives evenly spaced samples.
+
+->  numpy.linspace() function Syntax :-numpy.linspace(start, stop, num, endpoint)
+
+->  numpy.linspace() Parameters :- 
+     - start: Starting value of the sequence
+     - stop: End value of the sequence
+     - num: Number of samples to generate. Default is 50
+     - endpoint: If True (default), stop is the last value. If False, stop value is not included.
