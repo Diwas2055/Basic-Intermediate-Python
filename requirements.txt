@@ -1,8 +1,10 @@
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
+arrow==1.2.2
 asttokens==2.0.5
 attrs==21.4.0
 backcall==0.2.0
+backoff==2.1.2
 beautifulsoup4==4.11.1
 bleach==5.0.0
 certifi==2022.6.15
@@ -57,6 +59,7 @@ python-dateutil==2.8.2
 pytz==2022.1
 PyYAML==6.0
 pyzmq==23.1.0
+ratelimit==2.2.1
 requests==2.28.1
 rstr==3.2.0
 Send2Trash==1.8.0
