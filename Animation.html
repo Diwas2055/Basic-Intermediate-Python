@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Label Animation | HTML & CSS</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .form-wrapper {
+            max-width: 30%;
+            min-width: 300px;
+            padding: 50px 30px 50px 30px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+        }
+
+        .form-group {
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .form-label {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #999;
+            background-color: #fff;
+            z-index: 10;
+            transition: transform 150ms ease-out, font-size 150ms ease-out;
+        }
+
+        .focused .form-label {
+            transform: translateY(-125%);
+            font-size: .75em;
+        }
+
+        .form-input {
+            position: relative;
+            padding: 12px 0px 5px 0;
+            width: 100%;
+            outline: 0;
+            border: 0;
+            box-shadow: 0 1px 0 0 #e5e5e5;
+            transition: box-shadow 150ms ease-out;
+            box-shadow: 0 2px 0 0 blue;
+        }
+
+        .form-input.filled {
+            box-shadow: 0 2px 0 0 lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-wrapper">
+
+        <form action="" class="form">
+            <div class="form-group">
+                <label class="form-label" for="first">What is your name?</label>
+                <input id="first" class="form-input" type="text" />
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="last">What is your quest?</label>
+                <input id="last" class="form-input" type="text" />
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="color">What is your favorite color?</label>
+                <input id="color" class="form-input" type="text" />
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        $('input').focus(function () {
+            $(this).parents('.form-group').addClass('focused');
+        });
+
+        $('input').blur(function () {
+            var inputValue = $(this).val();
+            if (inputValue == "") {
+                $(this).removeClass('filled');
+                $(this).parents('.form-group').removeClass('focused');
+            } else {
+                $(this).addClass('filled');
+            }
+        })  
+    </script>
+</body>
+
+</html>
