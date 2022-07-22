@@ -24,3 +24,6 @@ print(datetime_now)
 from dateutil import tz
 datetime_tz=arrow.get(datetime(2013, 5, 5), tz.gettz('Asia/Kathmandu'))
 print(datetime_tz)
+
+datetime=arrow.get("2022-07-21 10:04:26.102404+05:45").timestamp()
+print(datetime)
